@@ -29,13 +29,8 @@ When creating a project it is important to think about organization of your code
     - update styling to increase font size and center the values on the grid
 
 - As a user, my partner can click on a square after me and see their mark.
-- create a function that take in the index of the selected box `playerChoice` and return ⚔️ for the first opponent or 🛡 for the second opponent
-- use conditionals to provide separate conditions to toggle on the emojis
-    - react state to store true/false value to toggle on emojis: firstOpp
-
-- input: index of the selected box
-    - output: ⚔️ for the first opponent or 🛡 for the second opponent
-    - function name: handleClick
+  - react state to store true/false condition to toggle on emojis: firstOpp
+  - modify function to with conditionals to return ⚔️ for the first opponent when `firstOpp` is true or 🛡 for the second opponent when `firstOpp` is false
 
 
 - As a user, I can't click on a square that has already been marked.
