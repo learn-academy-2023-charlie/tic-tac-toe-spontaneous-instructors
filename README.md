@@ -65,6 +65,9 @@ When creating a project it is important to think about organization of your code
 
 
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
+- create a variable `full` to store filtering the squares array for a null value
+- pass `full` as prop to Message component
+- create conditional rendering to display that the battle has ended when the length of the array is less than 1
 
 - As a user, I can click on a restart button that will clear the game board.
 

@@ -40,7 +40,7 @@ const App = () => {
       [0, 4, 8],
       [2, 4, 6]
     ]
-
+    
     // for loop to help iterate through the indexes in the winningLines array
     for (let i = 0; i < winningLines.length; i++) {
       // destructure each value within the nested array at each index that is accessed
@@ -49,13 +49,16 @@ const App = () => {
       // if first value is not null and all conditions are true then return that the first value is the winner
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
         return [`${squares[a]} is the winner`, false]  
-      }
+      } 
     } return ["No winner yet", true]
   }
 
   // invoking the winner function to determine a winner everything a box is clicked due to the re-render from setter function on handleClick
   const status = winner(squares)
   
+  const full = squares.filter(value => value === null)
+  console.log(full)
+
   return (
     <>
       <h1>Tic Tac Toe</h1>
@@ -64,7 +67,7 @@ const App = () => {
         handleClick={handleClick}
         status={status}
       />
-      <Message status={status}/>
+      <Message status={status} full={full}/>
     </>
   )
 }
