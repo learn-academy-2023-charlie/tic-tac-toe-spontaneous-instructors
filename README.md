@@ -42,6 +42,7 @@ When creating a project it is important to think about organization of your code
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
   - create a function that will take in the squares array and check for winning lines then return a string stating which player won.
   - function name: winner
+  - reference for winning combination: https://react.dev/learn/tutorial-tic-tac-toe
   - input: squares array
   - output: string stating which emoji won
     - create an array that contains combinations of the three indexes that will need the same value to establish a winner
@@ -54,7 +55,17 @@ When creating a project it is important to think about organization of your code
 
 
 - As a user, I can't continue playing the game after the game has been won.
+  - branch: no-play
+  - modify the winner function to share multiple values in an array
+  - reference: https://www.javascripttutorial.net/javascript-return-multiple-values/
+  - return winning statement and false value with the winning combination
+  - default return will be no winners and true value
+  - pass status as props to Square
+  - create conditional rendering on onClick attribute to prevent clicking boxes when status has false value
+
+
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
+
 - As a user, I can click on a restart button that will clear the game board.
 
 ### 🏔 Stretch Goals

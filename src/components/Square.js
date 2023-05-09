@@ -9,7 +9,7 @@ const Square = (props) => {
           <div 
             className="square" 
             key={index}
-            onClick={() => {props.handleClick(index)}}
+            onClick={() => {props.status[1] && props.handleClick(index)}}
           >
             {value}
           </div>

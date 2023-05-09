@@ -48,11 +48,12 @@ const App = () => {
       // now evaluate the value at each index of the squares array by referencing the destructured value
       // if first value is not null and all conditions are true then return that the first value is the winner
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-        return`${squares[a]} is the winner`  
+        return [`${squares[a]} is the winner`, false]  
       }
-    }
+    } return ["No winner yet", true]
   }
 
+  // invoking the winner function to determine a winner everything a box is clicked due to the re-render from setter function on handleClick
   const status = winner(squares)
   
   return (
@@ -61,6 +62,7 @@ const App = () => {
       <Square 
         squares={squares}
         handleClick={handleClick}
+        status={status}
       />
       <Message status={status}/>
     </>
