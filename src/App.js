@@ -4,11 +4,21 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
+  console.table(squares)
+
+  const handleClick = (playerChoice) => {
+    // alert(playerChoice) // used to test that function was receiving data
+    squares[playerChoice] = "⚔️"
+    setSquares([...squares])
+  }
 
   return (
     <>
       <h1>Tic Tac Toe</h1>
-      <Square squares={squares}/>
+      <Square 
+        squares={squares}
+        handleClick={handleClick}
+      />
     </>
   )
 }

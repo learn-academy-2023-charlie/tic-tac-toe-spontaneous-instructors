@@ -8,10 +8,36 @@ When creating a project it is important to think about organization of your code
 - opponents will have a choice between ⚔️ or 🛡
 
 - As a user, I can see a three by three grid game board on the page.
-  - 
+  - branch: grid
+  - on App.js, pass state variable `squares` as props to Square component
+  - on Square.js, iterate across the values of the squares array (using .map() to return the same length array) and return the values encapsulated by the custom css class attribute `square` to create 9 squares
+    - wrapped a custom css attribute `grid` around the mapped array to create a 3x3 grid
+    - use the index of the array as the unique key property to clear the warning in the console
   
 - As a user, I can click on a square to mark it.
+  - branch: sword
+  - using console.table() to see the index and value within the array
+  - functional props on App.js
+    - create a function that take in the index of the selected box `playerChoice` and return ⚔️ 
+    - Pseudocode:
+    - input: index of the selected box
+    - output: ⚔️ on the selected box
+    - function name: handleClick
+    - reference selected index of the squares array to reassign value to emoji 
+    - use spread operator in the setter function `setSquares` to copy the current values and to update changes in the array
+  - on Square.js, perform function call with onClick on each box. Use anonymous arrow function to prevent the function from being immediately invoke.
+    - update styling to increase font size and center the values on the grid
+
 - As a user, my partner can click on a square after me and see their mark.
+- create a function that take in the index of the selected box `playerChoice` and return ⚔️ for the first opponent or 🛡 for the second opponent
+- use conditionals to provide separate conditions to toggle on the emojis
+    - react state to store true/false value to toggle on emojis: firstOpp
+
+- input: index of the selected box
+    - output: ⚔️ for the first opponent or 🛡 for the second opponent
+    - function name: handleClick
+
+
 - As a user, I can't click on a square that has already been marked.
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
 - As a user, I can't continue playing the game after the game has been won.
