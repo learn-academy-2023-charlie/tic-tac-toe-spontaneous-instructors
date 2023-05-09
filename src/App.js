@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Square from './components/Square'
+import Message from './components/Message'
 import './App.css'
 
 const App = () => {
@@ -24,6 +25,36 @@ const App = () => {
     setSquares([...squares])
   }
 
+  // custom function that will take in the squares array and check for winning lines then return a string stating which player won
+  const winner = (squares) => {
+    // console.log("message from winner function") //tested functionality
+
+    // array that list the potential winning combination of indexes
+    const winningLines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ]
+
+    // for loop to help iterate through the indexes in the winningLines array
+    for (let i = 0; i < winningLines.length; i++) {
+      // destructure each value within the nested array at each index that is accessed
+      const [a, b, c] = winningLines[i]
+      // now evaluate the value at each index of the squares array by referencing the destructured value
+      // if first value is not null and all conditions are true then return that the first value is the winner
+      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+        return`${squares[a]} is the winner`  
+      }
+    }
+  }
+
+  const status = winner(squares)
+  
   return (
     <>
       <h1>Tic Tac Toe</h1>
@@ -31,6 +62,7 @@ const App = () => {
         squares={squares}
         handleClick={handleClick}
       />
+      <Message status={status}/>
     </>
   )
 }

@@ -40,6 +40,19 @@ When creating a project it is important to think about organization of your code
   - modify function using logical operator that states the value has to be null to allow functionality to occur
 
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
+  - create a function that will take in the squares array and check for winning lines then return a string stating which player won.
+  - function name: winner
+  - input: squares array
+  - output: string stating which emoji won
+    - create an array that contains combinations of the three indexes that will need the same value to establish a winner
+    - use for loop to iterate across each index and then evaluate whether or not the first value of the line is null
+      - destructure each value from the applicable index that is being accessed
+      - if the first value is an emoji, then evaluate whether or not that both the first value is strictly equal to the second value and that the second value is strictly equal to the third value
+        - if the conditions are true, then return a string stating that the first value is the winner
+  - function call will be stored in a variable `status` that will be used for conditional rendering to allow string to be displayed on the user interface
+  - create a component to display winning message: Message
+
+
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
