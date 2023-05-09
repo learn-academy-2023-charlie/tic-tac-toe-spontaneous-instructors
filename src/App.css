@@ -3,3 +3,10 @@
   height: 100px;
   width: 100px;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 310px;
+  margin: 0 auto;
+}
