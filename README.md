@@ -28,12 +28,17 @@ When creating a project it is important to think about organization of your code
   - on Square.js, perform function call with onClick on each box. Use anonymous arrow function to prevent the function from being immediately invoke.
     - update styling to increase font size and center the values on the grid
 
+
 - As a user, my partner can click on a square after me and see their mark.
+  - branch: toggle
   - react state to store true/false condition to toggle on emojis: firstOpp
   - modify function to with conditionals to return ⚔️ for the first opponent when `firstOpp` is true or 🛡 for the second opponent when `firstOpp` is false
 
 
 - As a user, I can't click on a square that has already been marked.
+  - branch: no-click
+  - modify function using logical operator that states the value has to be null to allow functionality to occur
+
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.

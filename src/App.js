@@ -14,10 +14,10 @@ const App = () => {
 
   // custom function that helps track the values that change based on what square each opponent clicks 
   const handleClick = (playerChoice) => {
-    if(firstOpp){
+    if(firstOpp && squares[playerChoice] === null){
       squares[playerChoice] = "⚔️"
       setFirstOpp(false)
-    } else {
+    } else if(squares[playerChoice] === null) {
       squares[playerChoice] = "🛡"
       setFirstOpp(true)
     }
