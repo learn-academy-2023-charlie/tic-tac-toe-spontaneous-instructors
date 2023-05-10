@@ -8,10 +8,12 @@ When creating a project it is important to think about organization of your code
 - My version allows opponents to toggle between ⚔️ or 🛡
 
 - Video of application after completing these user stories 
-https://github.com/learn-academy-2023-charlie/tic-tac-toe-spontaneous-instructors/assets/88990992/be23b943-a935-43f0-bc88-dbbb35a3de5f
+ 
+
+https://github.com/learn-academy-2023-charlie/tic-tac-toe-spontaneous-instructors/assets/88990992/d8cb0f34-586e-4c3c-a51f-ecba5d99433e
 
 - As a user, I can see a three by three grid game board on the page.
-  - branch: grid
+ - branch: grid
   - on App.js, pass state variable `squares` as props to Square component
   - on Square.js, iterate across the values of the squares array (using .map() to return the same length array) and return the values encapsulated by the custom css class attribute `square` to create 9 squares
     - wrapped a custom css attribute `grid` around the mapped array to create a 3x3 grid
