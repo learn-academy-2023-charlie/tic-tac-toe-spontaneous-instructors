@@ -5,9 +5,10 @@ This is a web game for two players on one device, taking turns. You will have to
 When creating a project it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. App.js controls of all the data in state, renders the other components, and performs the game logic.
 
 ### 📚 User Stories
-- opponents will have a choice between ⚔️ or 🛡
+- My version allows opponents to toggle between ⚔️ or 🛡
 
-https://github.com/learn-academy-2023-charlie/tic-tac-toe-spontaneous-instructors/assets/88990992/4f31b95f-34af-41e6-a8c4-13149ddc690d
+- Video of application after completing these user stories 
+https://github.com/learn-academy-2023-charlie/tic-tac-toe-spontaneous-instructors/assets/88990992/be23b943-a935-43f0-bc88-dbbb35a3de5f
 
 - As a user, I can see a three by three grid game board on the page.
   - branch: grid
