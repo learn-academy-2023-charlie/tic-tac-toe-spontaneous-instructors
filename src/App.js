@@ -56,8 +56,14 @@ const App = () => {
   // invoking the winner function to determine a winner everything a box is clicked due to the re-render from setter function on handleClick
   const status = winner(squares)
   
+  // checking whether or not there are null values present in the array
   const full = squares.filter(value => value === null)
-  console.log(full)
+
+  // reset the game
+  const reStart = () => {
+    setSquares(Array(9).fill(null))
+    setFirstOpp(true)
+  }
 
   return (
     <>
@@ -67,7 +73,11 @@ const App = () => {
         handleClick={handleClick}
         status={status}
       />
-      <Message status={status} full={full}/>
+      <Message 
+        status={status} 
+        full={full}
+        reStart={reStart}
+      />
     </>
   )
 }

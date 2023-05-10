@@ -65,11 +65,15 @@ When creating a project it is important to think about organization of your code
 
 
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
-- create a variable `full` to store filtering the squares array for a null value
-- pass `full` as prop to Message component
-- create conditional rendering to display that the battle has ended when the length of the array is less than 1
+  - branch: full
+  - create a variable `full` to store filtering the squares array for a null value
+  - pass `full` as prop to Message component
+  - create conditional rendering to display that the battle has ended when the length of the array is less than 1
 
 - As a user, I can click on a restart button that will clear the game board.
+  - create a component `Button` that will be called on the Message
+  - onclick will be added to trigger custom function
+  - create a function that will create a null array and reset `firstOpp` to true
 
 ### 🏔 Stretch Goals
 
