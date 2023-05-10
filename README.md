@@ -7,6 +7,8 @@ When creating a project it is important to think about organization of your code
 ### 📚 User Stories
 - opponents will have a choice between ⚔️ or 🛡
 
+https://github.com/learn-academy-2023-charlie/tic-tac-toe-spontaneous-instructors/assets/88990992/4f31b95f-34af-41e6-a8c4-13149ddc690d
+
 - As a user, I can see a three by three grid game board on the page.
   - branch: grid
   - on App.js, pass state variable `squares` as props to Square component
